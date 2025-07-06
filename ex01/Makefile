@@ -3,7 +3,9 @@ NAME = phonebook
 
 # Dossiers
 INCLUDES = includes
-SRC = class/PhoneBook.cpp main.cpp
+SRC = s_class/PhoneBook.cpp \
+	  s_class/Contact.cpp \
+	  main.cpp
 
 # Nom du compilateur
 CXX = c++

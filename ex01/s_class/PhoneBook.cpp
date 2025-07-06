@@ -1,9 +1,9 @@
-#include "../includes/PhoneBook.hpp"
+#include "PhoneBook.hpp"
 
 PhoneBook::PhoneBook() {
     std::cout << "PhoneBook open" << std::endl;
 }
 
 PhoneBook::~PhoneBook() {
-    std::cout << "PhoneBook closed" << std::endl;
+    return ;
 }
