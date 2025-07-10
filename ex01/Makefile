@@ -1,19 +1,15 @@
-# Nom de l'exécutable
 NAME = phonebook
 
-# Dossiers
 INCLUDES = includes
-SRC = s_class/PhoneBook.cpp \
-	  s_class/Contact.cpp \
-	  main.cpp
+SRC = srcs/class/PhoneBook.cpp \
+	  srcs/class/Contact.cpp \
+	  srcs/ContactSearch.cpp \
+	  srcs/main.cpp
 
-# Nom du compilateur
 CXX = c++
 
-# Flags de compilation
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -I$(INCLUDES)
 
-# Règle par défaut
 all: $(NAME)
 
 $(NAME): $(SRC)

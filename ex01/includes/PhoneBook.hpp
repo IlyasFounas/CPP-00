@@ -1,17 +1,19 @@
 #ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+# define PHONEBOOK_HPP
 
-#include "iostream"
-#include "Contact.hpp"
+# include "Contact.hpp"
+# include "iostream"
 
-class PhoneBook {
-    public:
-        PhoneBook();
-        ~PhoneBook();
-    private:
-        Contact _contacts[8];
-        int     _cycle;
-        bool    _full;
+class PhoneBook
+{
+  public:
+	PhoneBook();
+	~PhoneBook();
+	void add_contact(t_contact contact);
+	Contact _contacts[8];
+
+  private:
+	int _cycle;
 };
 
 #endif
