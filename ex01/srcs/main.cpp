@@ -16,11 +16,11 @@ static bool	add_contact(PhoneBook &book)
 	std::cout << "Contact's nickname :";
 	if (!std::getline(std::cin, contact.nickname))
 		return (false);
-	std::cout << "Contact's darkest_secret :";
-	if (!std::getline(std::cin, contact.darkest_secret))
-		return (false);
 	std::cout << "Contact's phone number :";
 	if (!std::getline(std::cin, contact.phone_number))
+		return (false);
+	std::cout << "Contact's darkest_secret :";
+	if (!std::getline(std::cin, contact.darkest_secret))
 		return (false);
 	std::cout << std::endl;
 	book.add_contact(contact);
