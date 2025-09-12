@@ -1,10 +1,10 @@
 NAME = phonebook
 
 INCLUDES = includes
-SRC = srcs/class/PhoneBook.cpp \
-	  srcs/class/Contact.cpp \
-	  srcs/ContactSearch.cpp \
-	  srcs/main.cpp
+SRC = PhoneBook.cpp \
+	  Contact.cpp \
+	  ContactSearch.cpp \
+	  main.cpp
 
 CXX = c++
 
