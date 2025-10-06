@@ -3,24 +3,39 @@
 
 void print_contacts(PhoneBook &book);
 
+static bool fill_field(std::string &s)
+{
+	do {
+		if (!std::getline(std::cin, s))
+			return (false);
+		if (s.empty())
+        	std::cout << "This field should not be empty, retry : ";
+	} while (s.empty());
+	return (true);
+}
+
 static bool	add_contact(PhoneBook &book)
 {
 	t_contact contact;
 
 	std::cout << "Contact's firstname :";
-	if (!std::getline(std::cin, contact.first_name))
+	if (!fill_field(contact.first_name))
 		return (false);
+
 	std::cout << "Contact's lastname :";
-	if (!std::getline(std::cin, contact.last_name))
+	if (!fill_field(contact.last_name))
 		return (false);
+
 	std::cout << "Contact's nickname :";
-	if (!std::getline(std::cin, contact.nickname))
+	if (!fill_field(contact.nickname))
 		return (false);
+	
 	std::cout << "Contact's phone number :";
-	if (!std::getline(std::cin, contact.phone_number))
+	if (!fill_field(contact.phone_number))
 		return (false);
+
 	std::cout << "Contact's darkest_secret :";
-	if (!std::getline(std::cin, contact.darkest_secret))
+	if (!fill_field(contact.darkest_secret))
 		return (false);
 	std::cout << std::endl;
 	book.add_contact(contact);

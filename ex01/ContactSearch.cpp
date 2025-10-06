@@ -42,9 +42,7 @@ static void	which_contact(PhoneBook &book, int limit)
 		std::cout << "Now choose a contact between " << 1;
 		std::cout << " and " << limit << " : ";
 		number = return_index() - 1;
-		if (number == -1)
-			return ;
-		else if (number < 0 || number >= limit)
+		if (number == -1 || number < 0 || number >= limit)
 			std::cout << "You must retry (invalid index)" << std::endl;
 		else
 			print_this_contact(book, number);
